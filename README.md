@@ -45,30 +45,19 @@ data/world_bank_development_indicators.csv
 
 ```
 climate-change-ai
-│
 ├── data/
 │   └── world_bank_development_indicators.csv
-│
-├── images/
-│   ├── Climate Change AI_page-0001.jpg
-│   ├── Climate Change AI_page-0002.jpg
-│   ├── Climate Change AI_page-0003.jpg
-│   ├── Climate Change AI_page-0004.jpg
-│   ├── Climate Change AI_page-0005.jpg
-│   ├── Climate Change AI_page-0006.jpg
-│   ├── Climate Change AI_page-0007.jpg
-│   ├── Climate Change AI_page-0008.jpg
-│   ├── Climate Change AI_page-0009.jpg
-│   └── Climate Change AI_page-0010.jpg
-│
+├── output/
+│   └── Climate Change AI final.pdf
 ├── src/
 │   ├── data_preprocessing.py
 │   └── model.py
-│
+├── .gitignore
+├── co2_model.pkl
 ├── main.py
-├── requirements.txt
 ├── README.md
-└── .gitignore
+└── requirements.txt
+
 ```
 
 ---
