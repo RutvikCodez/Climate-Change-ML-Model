@@ -2,47 +2,70 @@
 
 ## 📌 Project Overview
 
-Climate change is one of the most critical global challenges. Predicting carbon emissions can help policymakers design better environmental strategies.
+Climate change is one of the most critical global challenges facing the world today. Predicting carbon emissions can help governments and policymakers design better environmental strategies.
 
-This project applies **Machine Learning models** to analyze global climate and economic indicators and **predict CO₂ emissions**. The system uses data from the **World Bank World Development Indicators dataset** and compares multiple ML algorithms to identify the most accurate model.
+This project applies **Machine Learning models** to analyze global climate, population, and economic indicators and **predict CO₂ emissions**.
 
-The project demonstrates how **data-driven insights** can support climate mitigation strategies.
+The system uses a **cleaned dataset derived from World Bank Development Indicators** and compares multiple ML algorithms to identify the most accurate model.
+
+The project demonstrates how **data-driven insights can support climate mitigation strategies**.
 
 ---
 
 # 🎯 Objectives
 
-* Analyze historical climate and economic data
-* Predict CO₂ emissions using machine learning models
-* Compare model performance
+* Analyze global climate and environmental indicators
+* Predict **CO₂ emissions** using Machine Learning models
+* Compare performance of multiple ML algorithms
 * Visualize climate trends across countries
-* Provide insights for climate policy planning
+* Provide insights for climate policy and sustainability planning
 
 ---
 
 # 📊 Dataset
 
-Dataset Source: World Bank – World Development Indicators
+Dataset Source:
+World Bank – World Development Indicators
 
-Due to GitHub file size limits, the dataset is **not included in this repository**.
+Dataset used in this project is a **filtered and optimized dataset** containing only the required climate indicators.
 
+You can download the dataset from:
+
+https://www.kaggle.com/datasets/nicolasgonzalezmunoz/world-bank-world-development-indicators/data
+
+Place the dataset inside the project folder:
+
+```
+data/world_bank_development_indicators.csv
+```
 
 ---
 
 # 🗂 Project Structure
 
 ```
-Climate-Change-ML-Model
+climate-change-ai
 │
 ├── data/
-│   └── WDIData.csv
+│   └── world_bank_development_indicators.csv
+│
+├── images/
+│   ├── Climate Change AI_page-0001.jpg
+│   ├── Climate Change AI_page-0002.jpg
+│   ├── Climate Change AI_page-0003.jpg
+│   ├── Climate Change AI_page-0004.jpg
+│   ├── Climate Change AI_page-0005.jpg
+│   ├── Climate Change AI_page-0006.jpg
+│   ├── Climate Change AI_page-0007.jpg
+│   ├── Climate Change AI_page-0008.jpg
+│   ├── Climate Change AI_page-0009.jpg
+│   └── Climate Change AI_page-0010.jpg
 │
 ├── src/
 │   ├── data_preprocessing.py
 │   └── model.py
 │
 ├── main.py
-├── co2_model.pkl
 ├── requirements.txt
 ├── README.md
 └── .gitignore
@@ -69,85 +92,84 @@ The following models were implemented:
 
 ### Linear Regression
 
-A simple statistical model used for predicting CO₂ emissions based on independent variables.
+A statistical model used for predicting CO₂ emissions based on independent variables.
 
-### Random Forest
+### Random Forest Regressor
 
 An ensemble learning model that improves prediction accuracy by combining multiple decision trees.
 
-Random Forest performed better because it captures **non-linear relationships** in the data.
-
----
-
-# 📈 Model Performance
-
-| Model             | RMSE    | MAE    | R² Score |
-| ----------------- | ------- | ------ | -------- |
-| Linear Regression | 0.0623  | 0.0339 | 0.6217   |
-| Random Forest     | 0.0327  | 0.0104 | 0.896    |
-
----
-
-# 📊 Dataset Summary
-
-| Dataset Stage        | Details |
-| -------------------- | ------- |
-| Raw Dataset Rows     | 379,368 |
-| Raw Dataset Columns  | 66      |
-| Countries            | 182     |
-| Years                | 25      |
-| Cleaned Dataset Rows | 15,066  |
+Random Forest performs better because it captures **non-linear relationships** in climate data.
 
 ---
 
 # 📉 Features Used
 
-The model uses the following indicators:
+The machine learning model uses the following indicators:
 
-* GDP (current US$)
-* Renewable energy consumption (%)
+* Average precipitation
+* Forest land percentage
+* Agricultural land percentage
+* Renewable energy consumption
 * Electric power consumption
-* Population growth
-* Year
-* Country
+* Population density
+* Population
+* GDP (current US$)
 
-These features influence CO₂ emission levels.
+These indicators influence CO₂ emission levels across countries.
+
+---
+
+# 📈 Model Evaluation
+
+The models are evaluated using the following metrics:
+
+* **RMSE (Root Mean Squared Error)**
+* **MAE (Mean Absolute Error)**
+* **R² Score (Coefficient of Determination)**
+
+Example output from the model comparison:
+
+| Model             | RMSE   | MAE    | R² Score  |
+| ----------------- | -----  | -----  | --------  |
+| Linear Regression | 0.0354 | 0.0125 | 0.8318    |
+| Random Forest     | 0.0106 | 0.0019 | 0.9848    |
+
+The **Random Forest model achieved the best performance**.
 
 ---
 
 # 📊 Visualizations
 
-The project generates multiple charts including:
+The system generates several visualizations:
 
-* CO₂ Emissions Trend by Country
-* GDP vs CO₂ Emissions
-* Renewable Energy vs CO₂ Emissions
+* Correlation Heatmap
 * Feature Importance Graph
-* Model Prediction Comparison
+* Actual vs Predicted CO₂ Emissions
+* CO₂ Emission Trend by Country
 
-These visualizations help understand global climate patterns.
+These visualizations help understand how different environmental and economic indicators influence carbon emissions.
 
 ---
 
 # 🖥 System Workflow
 
-1. Load World Bank dataset
-2. Clean and preprocess data
-3. Handle missing values
-4. Select important features
-5. Train ML models
-6. Evaluate model performance
-7. Generate predictions
-8. Visualize results
+1️⃣ Load climate dataset
+2️⃣ Clean and preprocess the data
+3️⃣ Handle missing values
+4️⃣ Select important climate indicators
+5️⃣ Normalize numerical features
+6️⃣ Train Machine Learning models
+7️⃣ Evaluate model performance
+8️⃣ Visualize results and trends
 
 ---
 
 # 🚀 How to Run the Project
 
-### 1️⃣ Clone Repository
+### 1️⃣ Clone the Repository
 
 ```
-git clone https://github.com/RutvikCodez/Climate-Change-ML-Model.git
+git clone https://github.com/YOUR_USERNAME/climate-change-ai.git
 ```
 
 ---
@@ -160,17 +182,17 @@ pip install -r requirements.txt
 
 ---
 
-### 3️⃣ Download Dataset
+### 3️⃣ Add Dataset
 
-Download from World Bank and place in:
+Download dataset and place it in:
 
 ```
-data/WDIData.csv
+data/world_bank_development_indicators.csv
 ```
 
 ---
 
-### 4️⃣ Run Application
+### 4️⃣ Run the Streamlit App
 
 ```
 streamlit run main.py
@@ -181,28 +203,17 @@ The dashboard will open in your browser.
 ---
 
 # 📸 Output Screenshots
-
-```
-![alt text](images/page1.jpg)
-![alt text](images/page2.jpg)
-![alt text](images/page3.jpg)
-![alt text](images/page4.jpg)
-![alt text](images/page5.jpg)
-![alt text](images/page6.jpg)
-![alt text](images/page7.jpg)
-![alt text](images/page8.jpg)
-![alt text](images/page9.jpg)
-```
+📄 Full Report: [Download PDF](output/Climate%20Change%20AI%20final.pdf)
 
 ---
 
 # 🔮 Future Improvements
 
-* Add more climate indicators
-* Use Deep Learning models such as LSTM
-* Implement sector-wise emission prediction
+* Add more environmental indicators
+* Apply **Deep Learning models (LSTM / Neural Networks)**
+* Predict emissions for future years
+* Deploy the project using **Streamlit Cloud**
 * Build a real-time climate monitoring dashboard
-* Deploy the system as a web application
 
 ---
 
@@ -220,8 +231,8 @@ Hepin Suthar
 
 # 🌱 Conclusion
 
-This project demonstrates how machine learning can be applied to analyze climate data and predict CO₂ emissions. The results show that ensemble models like Random Forest provide better accuracy for complex environmental datasets.
+This project demonstrates how machine learning can be used to analyze environmental data and predict CO₂ emissions. The results show that **ensemble models like Random Forest provide better accuracy** for complex climate datasets.
 
-Such data-driven systems can help governments and researchers develop effective climate mitigation strategies.
+Such data-driven approaches can support governments, researchers, and organizations in making informed decisions for **climate change mitigation and sustainability**.
 
 ---
